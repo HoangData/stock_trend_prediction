@@ -35,14 +35,14 @@ def progress(data, start, end):
     plt.plot(data.Close)
     st.pyplot(fig)
 
-    st.header("Close price vs Time chart with 100MA")
+    st.header("Close price vs Time chart with MA100")
     ma100 = data.Open.rolling(100).mean()
     fig = plt.figure(figsize=(12, 6))
     plt.plot(ma100)
     plt.plot(data.Close)
     st.pyplot(fig)
 
-    st.header("Close price vs Time chart with 100MA & 200MA")
+    st.header("Close price vs Time chart with MA100 & MA200")
     ma100 = data.Open.rolling(100).mean()
     ma200 = data.Open.rolling(200).mean()
     fig = plt.figure(figsize=(12, 6))
